@@ -1,9 +1,10 @@
 void main() {
-  int age = 15;
+  int age = 14;
   bool hasParentalConsent = true;
   int movieAgeRating = 16;
 
-  if (age >= 18 || (hasParentalConsent && movieAgeRating >= 16)) {
+  if (age >= movieAgeRating ||
+      (hasParentalConsent && age >= movieAgeRating - 2)) {
     print("Film schauen gestattet");
   } else {
     print("Film schauen verweigert");
